@@ -23,15 +23,16 @@ class FetchWeatherApi {
   ///   WeatherData object
   Future<WeatherData> processData(lat, lon) async {
     var response = await http.get(Uri.parse(apiUrl(lat, lon)));
+    if(response.statusCode != 200){
+      Get.to(NoDataScreen());
+    }
     var jsonString = jsonDecode(response.body);
     weatherData = WeatherData(
       WeatherDataCurrent.fromJson(jsonString),
       WeatherDataHourly.fromJson(jsonString),
       WeatherDataDaily.fromJson(jsonString),
     );
-    if(response.statusCode == 404){
-      Get.to(NoDataScreen());
-    }
+
     return weatherData!;
 
   }

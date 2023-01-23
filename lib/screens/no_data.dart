@@ -47,6 +47,7 @@ class NoDataScreen extends StatelessWidget {
             const SizedBox(height: 85),
             GestureDetector(
               onTap: () {
+
                 Get.to(const HomeScreen());
               },
               child: Container(

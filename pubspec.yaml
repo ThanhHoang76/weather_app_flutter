@@ -78,6 +78,7 @@ flutter:
     - assets/icons/
     - assets/weather/
     - assets/fonts/
+    - assets/images/404-lost-in-space.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:weather_app_flutter/model/weather_data.dart';
@@ -37,6 +38,7 @@ class GlobalController extends GetxController {
     }
     super.onInit();
   }
+
 
   getLocation() async {
     bool isServiceEnabled;
