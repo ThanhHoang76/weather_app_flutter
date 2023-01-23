@@ -2,15 +2,26 @@
 
 weather app flutter
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Steps to run
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone repo
+2. Mở website [https://openweathermap.org/api](https://openweathermap.org/api) đăng ký và tạo api key
+4. Thay đổi api key trong path(/lib/api/api_key.dart)
+5. Kiểm tra hoạt động của api key bằng postman
+6. `pub get`
+7. Run project trên ios simulator hoặc adv
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+<table>
+    <td>
+    <img src="srceenshots/app.gif" height="500em" />
+    </td>
+   </tr>
+</table>
+
+## 💬 Feedback
+  email: thanhhoangit76@gmail.com<br>
+  facebook: https://www.facebook.com/thanh.hoangg.0607
