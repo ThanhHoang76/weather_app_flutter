@@ -3,6 +3,8 @@ import 'package:weather_app_flutter/model/weather_data_current.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:weather_app_flutter/ultis/custom_colors.dart';
 
+//https://www.youtube.com/watch?v=d1CckPQlhLo
+//lib sleek
 class ComfortLevel extends StatelessWidget {
   final WeatherDataCurrent weatherDataCurrent;
   const ComfortLevel({Key? key, required this.weatherDataCurrent})
@@ -30,26 +32,27 @@ class ComfortLevel extends StatelessWidget {
                   max: 100,
                   initialValue: weatherDataCurrent.current.humidity!.toDouble(),
                   appearance: CircularSliderAppearance(
-                      customWidths: CustomSliderWidths(
-                          handlerSize: 0, trackWidth: 12, progressBarWidth: 15),
-                      infoProperties: InfoProperties(
-                        bottomLabelText: "Độ ẩm",
-                        bottomLabelStyle: const TextStyle(
-                          letterSpacing: 0.1,
-                          fontSize: 14,
-                          height: 1.4,
-                        ),
+                    customWidths: CustomSliderWidths(
+                        handlerSize: 0, trackWidth: 12, progressBarWidth: 15),
+                    infoProperties: InfoProperties(
+                      bottomLabelText: "Độ ẩm",
+                      bottomLabelStyle: const TextStyle(
+                        letterSpacing: 0.1,
+                        fontSize: 14,
+                        height: 1.4,
                       ),
-                      animationEnabled: true,
-                      size: 140,
-                      customColors: CustomSliderColors(
-                          hideShadow: true,
-                          trackColor:
-                              CustomColors.firstGradientColor.withAlpha(50),
-                          progressBarColors: [
-                            CustomColors.firstGradientColor,
-                            CustomColors.secondGradientColor
-                          ])),
+                    ),
+                    animationEnabled: true,
+                    size: 140,
+                    customColors: CustomSliderColors(
+                      hideShadow: true,
+                      trackColor: CustomColors.firstGradientColor.withAlpha(50),
+                      progressBarColors: [
+                        CustomColors.firstGradientColor,
+                        CustomColors.secondGradientColor
+                      ],
+                    ),
+                  ),
                 ),
               )
             ],
@@ -58,7 +61,8 @@ class ComfortLevel extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            RichText(text:TextSpan(children: [
+            RichText(
+                text: TextSpan(children: [
               const TextSpan(
                 text: "feels like ",
                 style: TextStyle(
@@ -82,24 +86,28 @@ class ComfortLevel extends StatelessWidget {
               width: 1,
               color: Colors.grey,
             ),
-            RichText(text:TextSpan(children: [
-              const TextSpan(
-                text: "Chỉ số tia UV ",
-                style: TextStyle(
-                  fontSize: 12,
-                  color: CustomColors.textColorBlack,
-                  height: 0.8,
-                ),
+            RichText(
+              text: TextSpan(
+                children: [
+                  const TextSpan(
+                    text: "Chỉ số tia UV ",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: CustomColors.textColorBlack,
+                      height: 0.8,
+                    ),
+                  ),
+                  TextSpan(
+                    text: "${weatherDataCurrent.current.uvi}",
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: CustomColors.textColorBlack,
+                      height: 0.8,
+                    ),
+                  )
+                ],
               ),
-              TextSpan(
-                text: "${weatherDataCurrent.current.uvi}",
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: CustomColors.textColorBlack,
-                  height: 0.8,
-                ),
-              )
-            ],),),
+            ),
           ],
         )
       ],

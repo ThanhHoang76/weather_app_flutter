@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app_flutter/model/weather_data_current.dart';
-
 import '../ultis/custom_colors.dart';
 import 'details_icon_widget.dart';
 

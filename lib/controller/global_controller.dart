@@ -13,7 +13,6 @@ class GlobalController extends GetxController {
   final double lon = 107.59214795693468;
 
 
-  /// Creating a reactive variable of type bool, double and double.
   final RxBool _isLoading = true.obs;
   final RxDouble _lattitude = 0.0.obs;
   final RxDouble _longtitude = 0.0.obs;

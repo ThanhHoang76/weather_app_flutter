@@ -10,6 +10,11 @@ import '../ultis/api_url.dart';
 
 class FetchWeatherApi {
   WeatherData? weatherData;
+  ///https://www.youtube.com/watch?v=5fzdvPnp5bY
+  ///fetch api với getx
+  ///https://www.youtube.com/watch?v=c09XiwOZKsI
+  ///nested json
+  ///https://www.youtube.com/watch?v=3vUxfK4pL70
 
   /// Lấy kinh độ và vĩ độ của người dùng sau đó thực hiện call api
   /// API sử dụng kinh độ và vĩ độ,decode Json Response
