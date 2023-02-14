@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather_app_flutter/controller/global_controller.dart';
-import 'package:weather_app_flutter/ultis/custom_colors.dart';
 import 'package:weather_app_flutter/widget/comfort_level.dart';
 import 'package:weather_app_flutter/widget/current_weather_widget.dart';
 import 'package:weather_app_flutter/widget/daily_data_forecast.dart';

@@ -35,7 +35,6 @@ class HourlyDataWidget extends StatelessWidget {
       height: 150,
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: ListView.builder(
-
         scrollDirection: Axis.horizontal,
 
         /// Kiểm tra độ dài của danh sách giờ có lớn hơn 12 không
@@ -45,42 +44,44 @@ class HourlyDataWidget extends StatelessWidget {
             ? 12
             : weatherDataHourly.hourly.length,
         itemBuilder: (context, index) {
-          return Obx(() => GestureDetector(
-            onTap: () {
-              cardIndex.value = index;
-            },
-            child: Container(
-              width: 95,
-              margin: const EdgeInsets.only(left:20, right:8),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                boxShadow: [
-                  BoxShadow(
-                      offset: const Offset(0.5, 0),
-                      blurRadius: 30,
-                      spreadRadius: 1,
-                      color: CustomColors.dividerLine.withAlpha(150))
-
-                ],
-                gradient: cardIndex.value == index
-                    ? const LinearGradient(
-                  colors: [
-                    CustomColors.firstGradientColor,
-                    CustomColors.secondGradientColor
+          return Obx(
+            () => GestureDetector(
+              onTap: () {
+                cardIndex.value = index;
+              },
+              child: Container(
+                width: 95,
+                margin: const EdgeInsets.only(left: 20, right: 8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: const Offset(0.5, 0),
+                        blurRadius: 30,
+                        spreadRadius: 1,
+                        color: CustomColors.dividerLine.withAlpha(150))
                   ],
-                )
-                    : null,
-              ),
-              child: HourlyDetails(
-                /// đổ dữ liệu vào widget
-                index: index,
-                cardIndex: cardIndex.toInt(),
-                temp: weatherDataHourly.hourly[index].temp!,
-                timeStamp: weatherDataHourly.hourly[index].dt!,
-                weatherIcon: weatherDataHourly.hourly[index].weather![0].icon!,
+                  gradient: cardIndex.value == index
+                      ? const LinearGradient(
+                          colors: [
+                            CustomColors.firstGradientColor,
+                            CustomColors.secondGradientColor
+                          ],
+                        )
+                      : null,
+                ),
+                child: HourlyDetails(
+                  /// đổ dữ liệu vào widget
+                  index: index,
+                  cardIndex: cardIndex.toInt(),
+                  temp: weatherDataHourly.hourly[index].temp!,
+                  timeStamp: weatherDataHourly.hourly[index].dt!,
+                  weatherIcon:
+                      weatherDataHourly.hourly[index].weather![0].icon!,
+                ),
               ),
             ),
-          ));
+          );
         },
       ),
     );

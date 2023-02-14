@@ -1,4 +1,4 @@
-import 'package:weather_app_flutter/model/weather/daily.dart';
+
 
 class WeatherDataDaily{
   List<Daily> daily;

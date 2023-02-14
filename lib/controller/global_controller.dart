@@ -31,6 +31,7 @@ class GlobalController extends GetxController {
 
   @override
   void onInit() {
+    //kiểm tra xem định vị đã được mở hay chưa, nếu chưa thì chạy lại getLocation ngược lại lấy index của forcecard
     if (_isLoading.isTrue) {
       getLocation();
     }else {
@@ -39,7 +40,8 @@ class GlobalController extends GetxController {
     super.onInit();
   }
 
-
+  ///https://www.youtube.com/watch?v=9v44lAagZCI
+  ///cách lấy lat và lon bằng lib geolocator
   getLocation() async {
     bool isServiceEnabled;
     LocationPermission locationPermission;
@@ -65,7 +67,7 @@ class GlobalController extends GetxController {
     //lấy vị trí(kinh độ, vĩ độ) hiện tại của người dùng
     return await Geolocator.getCurrentPosition(
             desiredAccuracy: LocationAccuracy.high)
-        .then((value) {
+        .then((value) {//then((value) lấy giá trị của func getCurrentPosition rồi truyền vào var _lat và _lon
       //cập nhật vị trí hiện tại
       _lattitude.value = value.latitude;
       _longtitude.value = value.longitude;

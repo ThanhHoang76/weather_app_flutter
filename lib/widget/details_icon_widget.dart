@@ -31,7 +31,7 @@ class _DetailsIconState extends State<DetailsIcon> {
                 offset: Offset(28, 28),
                 color: Color(0xFFA7A9AF))
           ]),
-      child: Image.asset("${widget.imageAsset}"),
+      child: Image.asset(widget.imageAsset),
     );
   }
 }

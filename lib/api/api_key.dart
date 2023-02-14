@@ -1,3 +1,3 @@
 /// key openweatherapi
 
-const String apiKey = "your key";
+const String apiKey = "4e8fae854da7c212564ab974ab030092";

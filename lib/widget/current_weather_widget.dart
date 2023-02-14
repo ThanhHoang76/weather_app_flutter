@@ -28,29 +28,34 @@ class CurrentWeatherWidget extends StatelessWidget {
       children: [
         //icon thời tiết
         Image.asset(
-            "assets/weather/${weatherDataCurrent.current.weather![0].icon}.png",
-            height: 80,
-            width: 80),
+          "assets/weather/${weatherDataCurrent.current.weather![0].icon}.png",
+          height: 80,
+          width: 80,
+        ),
         Container(
           height: 80,
           width: 2,
-          color: Colors.black54.withAlpha(15)
+          color: Colors.black54.withAlpha(15),
         ),
         RichText(
-          text: TextSpan(children: [
-            TextSpan(
+          text: TextSpan(
+            children: [
+              TextSpan(
                 text: "${weatherDataCurrent.current.temp!.toInt()}°C",
                 style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 68,
-                    color: CustomColors.textColorBlack)),
-            TextSpan(
+                    color: CustomColors.textColorBlack),
+              ),
+              TextSpan(
                 text: "${weatherDataCurrent.current.weather![0].description}",
                 style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 14,
-                    color: Colors.grey))
-          ]),
+                    color: Colors.grey),
+              )
+            ],
+          ),
         ),
       ],
     );

@@ -6,7 +6,6 @@ import 'package:weather_app_flutter/ultis/custom_colors.dart';
 class DailyDataForecast extends StatelessWidget {
   final WeatherDataDaily weatherDataDaily;
   String getDay(final day) {
-    /// Converting the time from milliseconds to a DateTime object.
     DateTime time = DateTime.fromMillisecondsSinceEpoch(day * 1000);
     final formatTime = DateFormat('EEE').format(time);
     return formatTime;

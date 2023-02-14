@@ -99,7 +99,7 @@ class ComfortLevel extends StatelessWidget {
                   height: 0.8,
                 ),
               )
-            ])),
+            ],),),
           ],
         )
       ],
